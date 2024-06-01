@@ -115,7 +115,6 @@ test.describe("Test", () => {
     await page.waitForTimeout(3000);
     await page.locator("#amount").click();
     await page.locator("#amount").fill("60");
-
     await page.selectOption("#fromAccountId", { index: 0 });
     await page.selectOption("#toAccountId", { index: 1 });
     await page.getByRole("button", { name: "Transfer" }).click();
