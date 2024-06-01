@@ -137,6 +137,7 @@ test.describe("Test", () => {
     await page.locator("#downPayment").fill("2");
     await page.selectOption("#fromAccountId", { index: 0 });
     await page.getByRole("button", { name: "Apply Now" }).click();
+    await page.waitForTimeout(1000);
 
     await expect(page.locator('//*[@id="requestLoanResult"]/h1')).toHaveText(
       " Loan Request Processed "
