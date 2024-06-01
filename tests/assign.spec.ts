@@ -143,8 +143,10 @@ test.describe("Test", () => {
       " Loan Request Processed "
     );
   });
+  
 
   test.afterAll(async () => {
     await page.locator('//*[@id="leftPanel"]/ul/li[8]/a').click();
+    await page.waitForTimeout(3000);
   });
 });
